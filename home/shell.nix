@@ -32,7 +32,7 @@
   };
 
   home.sessionPath = [
-    "/Users/vini/.gem/ruby/3.3.0/bin"
+    "/Users/87labs/.gem/ruby/3.3.0/bin"
     "/opt/homebrew/bin"
   ];
 

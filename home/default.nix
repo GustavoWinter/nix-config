@@ -3,7 +3,7 @@
 {
   # import sub modules
   imports = [
-    ./_1password.nix
+    # ./_1password.nix
     ./core.nix
     ./git.nix
     ./go.nix
@@ -12,7 +12,7 @@
     ./starship.nix
     ./tmux.nix
     ./nvim
-    ./zed.nix
+    # ./zed.nix
   ];
 
   # Home Manager needs a bit of information about you and the

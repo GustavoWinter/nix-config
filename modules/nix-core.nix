@@ -5,11 +5,9 @@
   # enable flakes globally
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
   # Use this instead of services.nix-daemon.enable if you
   # don't wan't the daemon service to be managed for you.
   # nix.useDaemon = true;
@@ -41,4 +39,11 @@
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;
+
+  # Set the nixbld group GID to 350 to match the system's actual GID.
+  # This is necessary because newer Nix installations on macOS use GID 350
+  # instead of the historical default of 30000, and nix-darwin expects the
+  # configured GID to align with the system's value. Without this, activation
+  # fails due to a GID mismatch error during darwin-rebuild.
+  ids.gids.nixbld = 350;
 }
