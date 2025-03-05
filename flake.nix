@@ -74,20 +74,20 @@
           ./modules/apps.nix
           ./modules/system.nix
           ./modules/host-users.nix
-          # home-manager.darwinModules.home-manager
-          # {
-          #   home-manager = { 
-          #     useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     extraSpecialArgs = specialArgs;
-          #     users.${username} = { config, lib, pkgs, ... }: {
-          #       imports = [
-          #         ./home
-          #         nixvimModule
-          #       ];
-          #     };
-          #   };  
-          # }
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = { 
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = specialArgs;
+              users.${username} = { config, lib, pkgs, ... }: {
+                imports = [
+                  ./home
+                  nixvimModule
+                ];
+              };
+            };  
+          }
         ];
       };
 
