@@ -55,12 +55,20 @@
       # IM & audio & remote desktop & meeting
       "telegram"
       "discord"
+      "whatsapp"
+      "slack"
 
-      "raycast" # (HotKey: alt/option + space)search, caculate and run scripts(with many plugins)
-      "stats" # beautiful system monitor
+      "raycast"   # (HotKey: alt/option + space) search, calculate, and run scripts
+      "stats"     # Beautiful system monitor
 
       # Development
-      "android-studio" # Android development
+      "android-studio"
+      "docker"
+      "insomnia"
+      "obsidian"
+
+      # Other
+      # "kindle"
     ];
   };
 }

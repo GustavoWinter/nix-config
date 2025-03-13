@@ -11,7 +11,7 @@
   '';
 
   programs.ssh = {
-    enable = true;
+    enable = false;
     matchBlocks = {
       # Configure 1Password agent only on macOS; whilst using agent forwarding
       # to make it available to Linux machines.
